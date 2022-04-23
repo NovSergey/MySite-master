@@ -1,7 +1,7 @@
 .primary-nav-trigger .menu-icon{
     display: inline-block;
     position: absolute;
-    left: 20%;
+    left: 50%;
     top: 50%;
     width: 39px;
     height: 2px;
@@ -33,19 +33,23 @@
     height: 100%;
     width: 60px;
 }
+
 .primary-nav-trigger .menu-icon.is-clicked{
     background-color: rgba(255, 255, 255, 0);
 }
+
 .primary-nav-trigger .menu-icon.is-clicked::before{
     top: 0;
     transform: rotate(135deg);
 }
+
 .primary-nav-trigger .menu-icon.is-clicked::after{
     top: 0;
     transform: rotate(225deg);
 }
+
 .primary-nav{
-    z-index: 9999;
+    z-index: 3000;
     position: fixed;
     left: 0;
     top: 0;
@@ -60,15 +64,18 @@
     transition-property: transform;
     transition-duration: 0.4s;
 }
+
 .primary-nav li{
     font-weight: 300;
-    margin: .2em 0;
+    margin: 2em 0;
     font-size: 30px;
     text-transform: capitalize;
 }
+
 .primary-nav.is-visible{
     transform: translateY(0);
 }
+
 .primary-nav a{
     text-transform: uppercase;
     display: inline-block;
@@ -76,8 +83,25 @@
     border-radius: 0.25em;
     transition: background 0.2s;
     color: #fff;
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
+
 .primary-nav a:hover{
     background-color: #e36767;
+}
+
+.send_success{
+    padding: 2%;
+    box-shadow: 0 0 10px rgba(1, 255, 1, 0.3);
+    border: 2px solid rgba(1, 255, 1, 0.3);
+}
+
+.send_fail{
+    padding: 2%;
+    box-shadow: 0 0 10px rgba(255, 1, 1, 0.3);
+    border: 2px solid rgba(255, 1, 1, 0.3);
+}
+
+#send_form{
+    transition: all 1s ease-out;
 }
